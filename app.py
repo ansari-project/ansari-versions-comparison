@@ -21,7 +21,7 @@ settings_2.SYSTEM_PROMPT_FILE_NAME = 'system_msg_fn'
 agent_2 = Ansari(settings_2)
 
 text_size = gr.themes.sizes.text_md
-block_css = "block_css.css"
+# block_css = "block_css.css"
 notice_markdown = """## Chat and Compare
 - We're excited to present a comparison of two Ansari versions.
 - Engage with the two anonymized versions by asking questions.
@@ -261,7 +261,7 @@ with gr.Blocks(
     title="Ansari Compare",
     theme=gr.themes.Soft(text_size=text_size,
                           primary_hue=gr.themes.colors.sky, secondary_hue=gr.themes.colors.blue),
-    css=block_css,
+    #css=block_css,
 ) as gr_app:
     current_model_assignment = gr.State(randomly_assign_models())
     with gr.Tabs() as tabs:
