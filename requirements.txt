@@ -9,4 +9,4 @@ jinja2
 tenacity
 pydantic_settings==2.3.4
 pydantic
-langfuse
+langfuse==1.14.0
