@@ -269,12 +269,4 @@ with gr.Blocks(
         create_about_tab()
 
 if __name__ == "__main__":
-    gr_app.queue(
-            default_concurrency_limit=10,
-            status_update_rate=10,
-            api_open=False,
-        ).launch(
-            max_threads=200,
-            show_api=False,
-            share=False,
-        )
+    gr_app.launch()
