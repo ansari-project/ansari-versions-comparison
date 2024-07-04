@@ -1,10 +1,10 @@
 ---
 title: Ansari Versions Comparison
-emoji: 😻
+emoji: 🌙
 colorFrom: blue
-colorTo: blue
+colorTo: gray
 sdk: gradio
-sdk_version: 4.37.2
+sdk_version: 4.36.1
 app_file: app.py
 pinned: false
 license: mit
