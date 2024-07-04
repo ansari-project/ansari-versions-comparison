@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     VECTARA_CUSTOMER_ID: str
     VECTARA_CORPUS_ID: str
 
-    template_dir: DirectoryPath = Field(default="./resources/templates")
+    template_dir: DirectoryPath = Field(default="/home/user/app/resources/templates")
 
     MODEL: str = Field(default="gpt-4o-2024-05-13")
     MAX_FUNCTION_TRIES: int = Field(default=3)
