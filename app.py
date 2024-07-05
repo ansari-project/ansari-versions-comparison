@@ -269,4 +269,4 @@ with gr.Blocks(
         create_about_tab()
 
 if __name__ == "__main__":
-    gr_app.launch()
+    gr_app.launch(server_port=7860)
