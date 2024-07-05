@@ -11,7 +11,6 @@ class Settings(BaseSettings):
     MAX_THREAD_NAME_LENGTH: int = Field(default=100)
 
     OPENAI_API_KEY: SecretStr
-    PGPASSWORD: SecretStr
     KALEMAT_API_KEY: SecretStr
     VECTARA_AUTH_TOKEN: SecretStr
     VECTARA_CUSTOMER_ID: str
