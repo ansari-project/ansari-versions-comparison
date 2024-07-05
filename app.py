@@ -31,17 +31,17 @@ notice_markdown = """## Chat and Compare
 
 # Database connection configuration
 DB_CONFIG = {
-    'dbname': os.getenv('dbname', 'mwk'),
-    'user': os.getenv('dbname', 'mwk'),
-    'password': os.getenv('your_password', 'pw'),
-    'host': os.getenv('your_host', 'localhost'),
-    'port': os.getenv('your_port', '5432'),
+    'dbname': os.getenv('AB_TESTING_DB_NAME', 'mwk'),
+    'user': os.getenv('AB_TESTING_DB_USER', 'mwk'),
+    'password': os.getenv('AB_TESTING_DB_PASSWORD', 'pw'),
+    'host': os.getenv('AB_TESTING_DB_HOST', 'localhost'),
+    'port': os.getenv('AB_TESTING_DB_PORT', '5432'),
 }
 
 # Environment variables
-EXPERIMENT_ID = int(os.getenv('EXPERIMENT_ID', 1))
-MODEL_1_ID = int(os.getenv('MODEL_1_ID', 1))
-MODEL_2_ID = int(os.getenv('MODEL_2_ID', 2))
+EXPERIMENT_ID = int(os.getenv('AB_TESTING_EXPERIMENT_ID', 1))
+MODEL_1_ID = int(os.getenv('AB_TESTING_MODEL_1_ID', 1))
+MODEL_2_ID = int(os.getenv('AB_TESTING_MODEL_2_ID', 2))
 
 # Global variable to store the current model assignment
 current_model_assignment = gr.State({})
