@@ -57,14 +57,14 @@ def randomly_assign_models():
 
 def insert_conversation(cursor, model_id, conversation):
     cursor.execute(
-        "INSERT INTO ab_testing_conversations (model_id, conversation, timestamp) VALUES (%s, %s, %s) RETURNING conversation_id",
+        "INSERT INTO ab_testing.ab_testing_conversations (model_id, conversation, timestamp) VALUES (%s, %s, %s) RETURNING conversation_id",
         (model_id, Json(conversation), datetime.now(timezone.utc))
     )
     return cursor.fetchone()[0]
 
 def insert_comparison(cursor, model_a_id, model_b_id, conversation_a_id, conversation_b_id, user_vote):
     cursor.execute(
-        "INSERT INTO ab_testing_comparisons (model_a_id, model_b_id, conversation_a_id, conversation_b_id, user_vote, timestamp) "
+        "INSERT INTO ab_testing.ab_testing_comparisons (model_a_id, model_b_id, conversation_a_id, conversation_b_id, user_vote, timestamp) "
         "VALUES (%s, %s, %s, %s, %s, %s)",
         (model_a_id, model_b_id, conversation_a_id, conversation_b_id, user_vote, datetime.now(timezone.utc))
     )
