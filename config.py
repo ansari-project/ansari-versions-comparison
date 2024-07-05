@@ -2,7 +2,7 @@ import logging
 from functools import lru_cache
 from typing import Union, Optional
 from pydantic_settings import BaseSettings
-from pydantic import SecretStr, PostgresDsn, DirectoryPath, Field, AnyUrl, validator
+from pydantic import SecretStr, PostgresDsn, DirectoryPath, Field, validator
 
 logger = logging.getLogger(__name__)
 
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     AB_TESTING_DB_NAME: str
     AB_TESTING_DB_USER: str
     AB_TESTING_DB_PASSWORD: SecretStr
-    AB_TESTING_DB_HOST: AnyUrl
+    AB_TESTING_DB_HOST: str
     AB_TESTING_DB_PORT: int
     
     # A/B Testing environment variables
